@@ -13,6 +13,6 @@ mv kubectl /usr/local/bin/kubectl
 
 aws s3api create-bucket --bucket sushma.project.flm.k8s.local --region us-east-1
 aws s3api put-bucket-versioning --bucket sushma.project.flm.k8s.local --region us-east-1 --versioning-configuration Status=Enabled
-export KOPS_STATE_STORE=s3://sushmaa.project.flm.k8s.local
+export KOPS_STATE_STORE=s3://sushma.project.flm.k8s.local
 kops create cluster --name sushma.k8s.local --zones us-east-1a,us-east-1b --master-count=1 --master-size t2.large --master-volume-size=30 --node-count=3 --node-size t2.medium --node-volume-size=20
 kops update cluster --name sushma.k8s.local --yes --admin
